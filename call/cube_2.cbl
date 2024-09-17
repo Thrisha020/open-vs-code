@@ -1,0 +1,25 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID.  SUM-OF-CUBES.
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       
+       01 STEP         PIC S9(10).
+       01 CUBE         PIC S9(10).
+       01 CUBE-SUM     PIC S9(10) VALUE 0.
+
+       LINKAGE SECTION.
+       01 LINKED-ITEMS.
+           05 L-MAX-STEP PIC S9(10).
+           05 RESULT     PIC S9(10).
+
+       PROCEDURE DIVISION USING LINKED-ITEMS.
+           PERFORM VARYING STEP FROM 1 BY 1 UNTIL STEP > L-MAX-STEP
+               COMPUTE CUBE = STEP ** 3
+               ADD CUBE TO CUBE-SUM
+           END-PERFORM.
+           DISPLAY CUBE-SUM.
+           MOVE CUBE-SUM TO RESULT.
+           GOBACK.
+           
+       END PROGRAM SUM-OF-CUBES.
