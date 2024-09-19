@@ -1,0 +1,8 @@
+system:
+  user_name: "Thrisha M"  
+  git_server_url: "https://github.com" 
+  git_username: "Thrisha020"  
+  application_repo: "open-vs-code"  
+  program_name: "first.cbl" 
+  local_repo_path: "/Users/thrisham/Desktop/cobol_code"  # Local repository path
+
